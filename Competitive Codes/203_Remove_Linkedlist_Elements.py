@@ -107,3 +107,38 @@ if __name__ == "__main__":
     while str(val) in list(obj.show())[1:-1]:
         obj.remove(val)
     print(obj.show())
+
+
+
+"""
+class Solution(object):
+    def removeElements(self, head, val):
+        if head is None:
+            return
+        # set a pointer to the head of the list
+        curNode = head
+        # and set a pointer to the previous node
+        prevNode = None
+        i = 0
+        
+        while curNode is not None:
+            # if the head is the one removed
+            if curNode.val == val and i == 0:
+                head = curNode.next
+                curNode = curNode.next
+                continue # keep going if the head still needs to be changed
+                # like in example [7,7,7,7] 7
+            else:
+                i+=1
+            # else in the middle or end
+            if curNode.val == val:
+                prevNode.next = curNode.next
+                curNode = prevNode.next
+                continue
+            
+            prevNode = curNode
+            curNode = curNode.next
+            
+        return head
+
+"""
