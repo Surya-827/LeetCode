@@ -10,3 +10,19 @@ class Solution:
         reverseStr = str(bin(n))[::-1][:-2]
         reverseStr += (32-len(reverseStr)) * '0'
         return int(reverseStr, 2)
+
+#WAY 3
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        sign = 1 if n > 0 else -1
+
+        n = abs(n)
+        ans = 0
+        k = 31
+
+        while n > 0:
+            ans = ans + (n % 2) * 2 ** k
+            k -= 1
+            n //= 2
+
+        return sign * ans
