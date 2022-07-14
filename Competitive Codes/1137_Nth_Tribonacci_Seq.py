@@ -16,19 +16,19 @@ def tribonacci(self, n: int) -> int:
 
 
 #WAY 2
-class Solution(object):
-    @classmethod
-    def tribonacci(cls,n:int) -> int:
-        x,y,z = 0,1,1
-
-        for _ in range(n-2):
-            t1 = x
-            t2 = y
-            x = y
-            y = z
-            z = y + t1 + t2
-
-        return z n!=0 else 0
+# class Solution(object):
+#     @classmethod
+#     def tribonacci(cls,n:int) -> int:
+#         x,y,z = 0,1,1
+#
+#         for _ in range(n-2):
+#             t1 = x
+#             t2 = y
+#             x = y
+#             y = z
+#             z = y + t1 + t2
+#
+#         return z n!=0 else 0
 
 
 
