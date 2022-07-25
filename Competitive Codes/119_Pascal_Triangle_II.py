@@ -36,3 +36,21 @@ def findRow(rowIndex):
             currentRow.append(prevRow[j - 1] + prevRow[j])
         currentRow.append(1)
         return currentRow
+
+#Way 4
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        if rowIndex == 0: return [1]
+        if rowIndex == 1: return [1, 1]
+        current = [1, 1]
+        for i in range(rowIndex - 1):
+            lst = [1]
+            l = 0
+            while l < (len(current) - 1):
+                lst.append(current[l] + current[l + 1])
+                l += 1
+
+            lst.append(1)
+            current = lst
+
+        return current
