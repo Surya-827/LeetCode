@@ -13,5 +13,5 @@ class Solution(object):
         s = sum(salary) - min(salary) - max(salary)
         l = len(salary)-2
         return s/l
-    
+
 
